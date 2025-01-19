@@ -1,0 +1,17 @@
+CLIENTE ( numCliente(PK), descuento, saldo, limiteCredito )
+
+CLIENTE_DIRENVIO ( numCliente(PK,FK), calle(PK), num(PK), col(PK), cp(PK), cd(PK) )
+
+FABRICA ( numFabrica(PK), telefono, numArtsProvee, existencias, numFabricaRecom(FK) )
+
+ARTICULO ( numArticulo(PK), descripcion, numCliente(FK), idPedido(FK), cantidadPedido )
+
+PEDIDO ( numCliente(PK,FK), idPedido(PK), mesP, añoP, diaP )
+
+FABRICA_ARTICULO ( numFabrica(PK,FK), numArticulo(PK,FK), cantidadDist )
+
+CUIDADOSALUD ( numArticulo(FK), numTotalArts )
+
+CUIDADOCABELLO ( numArticulo(FK), diaC, mesC, añoC )
+
+CUIDADOPERSONAL ( numArticulo(FK), diaCad, mesCad, añoCad )

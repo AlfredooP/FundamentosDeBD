@@ -1,0 +1,9 @@
+DEPARTAMENTO ( claveD(PK), nssEmpDirige, nombre, localizacion, diaD, mesD, añoD )
+
+EMPLEADO ( nssE(PK), nombre1E, nombre2E, apPatE, apMatE, calleE, numE, colE, cpE, cdE, diaE, mesE, añoE, salario, claveD(FK) )
+
+PROYECTO ( claveP(PK), nombre, calleP, numP, colP, cpP, cdP, claveD(FK) )
+
+DEPENDIENTE ( nssE(PK,FK), idDep(PK), nombre1D, nombre2D, apPatD, apMatD, diaND, mesND, añoND, sexo, parentesco )
+
+EMPLEADO_PROYECTOS ( nssE(PK,FK), claveP(PK,FK), numHoras )

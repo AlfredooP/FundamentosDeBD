@@ -1,0 +1,13 @@
+PACIENTE ( codigoP(PK), nomb1P, nomb2P, apPatP, apMatP, calleP, numP, colP, cpP, cdP, diaNP, mesNP, añoNP )
+
+PACIENTE_TEL ( codigoP(PK,FK), telefono(PK) )
+
+MEDICO ( codigoM(PK), nomb1M, nomb2M, apPatM, apMatM )
+
+MEDICO_ESP ( codigoM(PK,FK), especialidad(PK) )
+
+MEDICO_TEL ( codigoM(PK,FK), telefono(PK) )
+
+CONSULTA ( codigoC(PK), noConsultorio, observaciones, diaC, mesC, añoC, codigoP(FK) )
+
+MEDICO_CONSULTA ( codigoM(PK,FK), codigoC(PK,FK) )

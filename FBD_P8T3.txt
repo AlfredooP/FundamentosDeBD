@@ -1,0 +1,11 @@
+JUGADOR (codigoJ(PK), nomb1J, nomb2J, apPatJ, apMatJ, añoNJ, mesNJ, diaNJ, codigoE(FK) )
+
+JUGADOR_POSICION (codigoJ(PK,FK), posicion(PK) )
+
+EQUIPO ( codigoE(PK), nombre, estadio, aforo, año, cd, codigoP(FK), idP(FK) )
+
+PRESIDENTE ( idP(PK), nomb1P, nom2P, apPatP, apMatP, añoNP, mesNP, diaNP, añoEleccion, equipo )
+
+PARTIDO ( codigoP(PK), añoP, mesP, diaP, golesFuera, golesCasa )
+
+GOLES ( codigoJ(PK,FK), idGOl(PK), minuto, descripcion, codigoP(FK) )

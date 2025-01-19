@@ -1,0 +1,21 @@
+COMPLEJODEPORTIVO ( claveCD(PK), calleCD, numCD, colCD, cpCD, cdCD, nombre1J, nombre2J, apPatJ, apMatJ, presupuesto, claveS(FK) )
+
+SEDE ( claveS(PK), numComplejos, presupuesto )
+
+EVENTO ( claveE(PK), diaE, mesE, añoE, hora, minuto, seg, numParticips, numComisarios )
+
+EVENTO_EQ ( claveE(PK,FK), equipamiento(PK) )
+
+COMISARIO ( codigoC (PK), nombre1C, nombre2C, apPatC, apMatC, claveE(FK) )
+
+COMISARIO_NAC ( codigoC(PK,FK), nacionalidad(PK) )
+
+COMPDEP_EVENTO ( claveCD(PK,FK), claveE(PK,FK) )
+
+UNIDEPORTIVO ( claveCD(FK), numeroEventos )
+
+POLIDEPORTIVO ( claveCD(FK), localizacion, numDeportes )
+
+JUEZ ( codigoC(FK), numEventos )
+
+OBSERVADOR ( codigoC(FK), diaUE, mesUE, añoUE )

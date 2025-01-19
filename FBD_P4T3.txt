@@ -1,0 +1,17 @@
+DOCENTE ( curpD(PK), nomb1D, nomb2D, apPatD, apMatD, calleD, numD, cpD, colD, cdD, diaD, mesD, añoD )
+
+DOCENTE_TEL ( curpD(PK,FK), telefonoD(PK) )
+
+ALUMNO ( curpA(PK), nomb1A, nomb2A, apPatA, apMatA, calleA, numA, cpA, colA, cdA, diaA, mesA, añoA )
+
+ALUMNO_TEL ( curpA(PK,FK), telefonoA(PK) )
+
+MATERIA ( idM(PK), nombreM, grupoM, numAlumM, idC(FK) )
+
+MATERIA_HORARIO ( idM(PK), horaM(PK), lugarM(PK) )
+
+CURSO ( idC(PK), nombreC, diaC, mesC, añoC, numSemC, curpD(FK) )
+
+DOCENTE_MATERIA ( curpD(PK,FK), idM(PK,FK) )
+
+ALUMNO_MATERIA ( curpA(PK,FK), idM(PK,FK) )

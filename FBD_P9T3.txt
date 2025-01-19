@@ -1,0 +1,19 @@
+DEPARTAMENTO ( idDepto(PK), nombreD, cale, num, cp, cd, col )
+
+TRABAJADOR ( nssT(PK), nombre1, nombre2, apPat, apMat, calleT, numT, colT, cpT, cdT, diaNT, mesNT, añoNT, salario, idDepto(FK), nssTSup(FK) )
+
+TRAB_TEL ( nssT(PK,FK) telefono(PK) )
+
+CONSTRUCCION ( idC(PK), nombre, idDepto(FK) )
+
+CONST_LOCAL ( idC(PK,FK), calleC(PK), numC(PK), colC(PK), cpC(PK), cdC(PK) )
+
+DEPENDIENTE ( nssT(PK,FK), idDep(PK), parentesco )
+
+CONST_TRAB ( idC(PK,FK), nssT(PK,FK), numHrs, diaC, mesC, añoC )
+
+FAMILIAR ( idC(FK), tipoTerreno )
+
+EMPRESARIAL ( idC(FK), numTerrenos )
+
+INDUSTRIAL ( idC(FK), nombre1EU, nombre2EU, apPatEU, apMatEU )

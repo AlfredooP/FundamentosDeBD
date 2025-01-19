@@ -1,0 +1,11 @@
+AUTOMOVIL ( idAutomovil(PK), placa, modelo, marca, numSSCli(FK) )
+
+CLIENTE ( numSSCli(PK), nombre1, nombre2, aPat, aMat, calle, num, col, cp, cd )
+
+MECANICO ( numSSMec(PK), nombre1, nombre2, aPat, aMat, dia, mes, año, salario )
+
+AUTOMOVIL_MECANICO ( idAutomovil(PK,FK), numSSMec(PK,FK), numHoras, diaR, mesR, añoR )
+
+AUTOMOVIL_COLOR ( idAutomovil(PK,FK), color(PK) )
+
+CLIENTE_TELEFONO (numSSCli(PK,FK), telefono(PK) )

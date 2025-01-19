@@ -1,0 +1,11 @@
+AUTOR ( codigoAutor(PK), nomb1A, nomb2A, apPatA, apMatA, diaNA, mesNA, añoNA )
+
+USUARIO ( codigoUsuario(PK), nomb1U, nomb2U, apPatU, apMatU, calleU, numU, colU, cpU, cdU )
+
+USUARIO_TEL ( codigoUsuario(PK,FK), telefono(PK) )
+
+LIBRO ( codigoLibro(PK), titulo, editorial, numPags )
+
+VOLUMEN ( codigoVol(PK), localizacion, codigoUsuario(FK), diaP, mesP, añoP, diaD, mesD, añoD, codigoLibro(FK) )
+
+AUTOR_LIBRO ( codigoAutor(PK,FK), codigoLibro(PK,FK)
